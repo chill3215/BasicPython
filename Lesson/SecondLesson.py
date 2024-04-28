@@ -132,3 +132,9 @@ tuple[0].append(1)
 tuple[0][1] = 7
 # tuple[0] = [1, 1, 1, 1, 1] false
 print(tuple)
+
+list = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+list.append((7, 8, 9))
+list[0] = (7, 8, 9)
+# list[0][1] = 3
+print(list)
