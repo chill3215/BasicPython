@@ -72,11 +72,63 @@
 # for numbers in range(5, 10, 2):
 #     print(numbers)
 
-# tuple is like list but immutable
-list = (1, 2, 3, 4, 5)
-print(list.index(3, 0, len(list)))
-print(list.__add__((6, 7, 8)))
-print(list.__getitem__(0))
+# # tuple is like list but immutable
+# list = (1, 2, 3, 4, 5)
+# print(list.index(3, 0, len(list)))
+# print(list.__add__((6, 7, 8)))
+# print(list.__getitem__(0))
 
+# # this is also a tuple
+# # tuple packing, the reverse is call sequence unpacking
+# tuple3 = 1, 2, 3
+# print(tuple3)
+#
+# tuple = ()
+# # this tuple is empty
+# print(len(tuple))
+#
+# # this tuple is not empty, parenthesis can be ommited
+# tuple2 = 'a',
+# print(len(tuple2))
 
+# # how to add new value to dictionary
+# dic1 = {"a": [1], "b": [2], "c": [3], "d": 4}
+# print(dic1)
+#
+# # only added temporarily, locally, not in memory
+# dic1["a"].__add__([3])
+# print(dic1["a"])
+# # add to the value to an already existed key
+# dic1["a"].append(2)
+# print(dic1["a"])
+# for k, v in dic1.items():
+#     print(f"key: {k}, value: {v}")
+#     print("{}".format(k))
+# del dic1["a"]
 
+# # iterate and get index and corresponding values at the same time
+# list4 = ['a', 'b', 'c']
+# for index, value in enumerate(list4):
+#     print(f"index: {index}, value: {value}")
+#
+# # iterate2 sequence at the same time
+# attribute = ['name', 'size', 'price']
+# value = ['suncream', '100ml', '$30']
+# for attr, val in zip(attribute, value):
+#     print(f"{attr}: {val}")
+#     print("{0}: {1}".format(attr, val))
+#
+# for i in reversed(range(2, 10, 2)):
+#     print(i)
+
+# list = [1, 2, 3, 4, 5, 5, 2, 6, 7, 8, 9]
+# for i in set(list):
+#     print(i)
+
+# change can be taken on the list level, not the tuple level
+tuple = ([1, 2, 3], [4, 5, 1])
+print(tuple)
+tuple[0].append(1)
+tuple[0][1] = 7
+# tuple[0] = [1, 1, 1, 1, 1] false
+print(tuple)
